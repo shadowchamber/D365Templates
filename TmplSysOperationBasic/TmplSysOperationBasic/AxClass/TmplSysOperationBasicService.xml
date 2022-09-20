@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>TmplSysOperationBasicService</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+/// <summary>
+/// SysOperation service class
+/// </summary>
+public class TmplSysOperationBasicService
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>process</Name>
+				<Source><![CDATA[
+    /// <summary>
+    /// Service class entry point
+    /// </summary>
+    /// <param name = "_dataContract">contract as TmplSysOperationBasicDataContract</param>
+    public void process(TmplSysOperationBasicDataContract _dataContract)
+    {
+
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

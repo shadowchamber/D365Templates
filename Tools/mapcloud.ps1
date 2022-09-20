@@ -1,0 +1,2 @@
+New-Item -ItemType SymbolicLink -Path "c:\d365_VS_AddIns\Templates\SysOperationBasic" -Target "TmplSysOperationBasic\TmplSysOperationBasic"
+New-Item -ItemType SymbolicLink -Path "k:\AosService\PackagesLocalDirectory\TmplSysOperationBasic" -Target "TmplSysOperationBasic"

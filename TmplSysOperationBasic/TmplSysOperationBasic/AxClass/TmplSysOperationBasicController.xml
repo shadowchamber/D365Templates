@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>TmplSysOperationBasicController</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+/// <summary>
+/// SysOperation controller class
+/// </summary>
+[SysOperationJournaledParametersAttribute(true)]
+public class TmplSysOperationBasicController extends SysOperationServiceController
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>withExecutionMode</Name>
+				<Source><![CDATA[
+    /// <summary>
+    /// Applies execution mode to controller
+    /// </summary>
+    /// <param name = "_executionMode">execution mode as SysOperationExecutionMode</param>
+    /// <returns>controller as TmplSysOperationBasicController</returns>
+    public TmplSysOperationBasicController withExecutionMode(SysOperationExecutionMode _executionMode)
+    {
+        this.parmExecutionMode(_executionMode);
+
+        return this;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>withArgs</Name>
+				<Source><![CDATA[
+    /// <summary>
+    /// Applies arguments to controller
+    /// </summary>
+    /// <param name = "_args">arguments as Args</param>
+    /// <returns>controller as TmplSysOperationBasicController</returns>
+    public TmplSysOperationBasicController withArgs(Args _args)
+    {
+        this.parmArgs(_args);
+
+        return this;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>main</Name>
+				<Source><![CDATA[
+    /// <summary>
+    /// Runnable class entry point
+    /// </summary>
+    /// <param name = "_args">arguments as Args</param>
+    public static void main(Args _args)
+    {
+        new TmplSysOperationBasicController(classStr(TmplSysOperationBasicService),
+                methodStr(TmplSysOperationBasicService, process),
+                SysOperationExecutionMode::Synchronous)
+            .withExecutionMode(SysOperationExecutionMode::Synchronous)
+            .withArgs(_args)
+            .startOperation();
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>
